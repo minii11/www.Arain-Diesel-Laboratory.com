@@ -1,205 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HM Skills</title>
+    <title>🔧 آرائیں ڈیزل لیبارٹری 🔧</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
 
         body {
-            background-color: #f9f9f9;
-        }
-
-        header {
+            margin: 0;
+            padding: 10px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            background-color: #f5f5f5;
+            color: #222;
+            height: 100vh; /* Ensure the content fits within the viewport height */
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        header img {
-            width: 100%;
-            height: auto;
-            max-width: 500px;
-            display: block;
-        }
-
-        header h1 {
-            margin-left: 10px;
-            color: purple;
-            font-size: 24px;
-        }
-
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            color: purple;
-        }
-
-        .sidebar {
-            display: none;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #ffcc99;
-        }
-
-        .sidebar a {
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #ffcc99;
-            display: block;
-            text-align: center;
-        }
-
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-
-        .main-content {
-            margin-top: 20px;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-
-        .login-form {
-            padding: 20px;
-            text-align: center;
-            font-size: 18px;
-            background-color: #e6e6fa; /* Light purple color */
-            border-radius: 8px;
-            max-width: 400px;
+        .container {
+            max-width: 350px; /* Adjusted for better visibility */
+            max-height: 90vh; /* Restrict container height to fit mobile screen */
             margin: 0 auto;
-        }
-
-        .login-form input {
+            background-color: #ffffff;
             padding: 10px;
-            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevents overflowing content */
+        }
+
+        h1 {
             font-size: 16px;
-            width: 80%;
-            max-width: 300px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .login-form .key-input {
-            border: 2px solid red; /* Red outline for the key input box */
-        }
-
-        .login-form button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: orange; /* Orange login button */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 80%;
-            max-width: 300px;
-        }
-
-        .login-form button:hover {
-            background-color: darkorange;
-        }
-
-        .error-message {
-            color: red;
-            margin-top: 10px;
+            color: #FF8C00;
+            text-align: center;
+            margin-bottom: 10px;
             font-weight: bold;
-            display: none;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 20px;
-            }
+        h2 {
+            font-size: 14px;
+            color: #5A5A5A;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-            .menu-icon {
-                font-size: 25px;
-            }
+        p {
+            font-size: 12px;
+            line-height: 1.4; /* Smaller line height to fit more content */
+            margin-bottom: 8px;
+            color: #333;
+        }
 
-            .sidebar a {
-                font-size: 16px;
-            }
+        .highlight {
+            color: #6A5ACD; /* Light purple for emphasis */
+            font-weight: bold;
+        }
 
-            .main-content {
-                font-size: 20px;
-            }
-
-            header img {
-                max-width: 100%;
-            }
+        .contact {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #FF8C00;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>🔧 آرائیں ڈیزل لیبارٹری 🔧</h1>
+        <h2>🚜 آپ کے معتمد ڈیزل انجن ماہرین!</h2>
+        <p><span class="highlight">📍 مقام:</span> جنرل بس سٹینڈ، نانگی میرپور، نزد ال-سجاد آٹو</p>
 
-    <header>
-        <img src="img login.jpg" alt="HM Skills Logo">
-        <h1>HM Skills</h1>
-        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
-    </header>
+        <p class="highlight">🔧 ہماری پیشہ ورانہ خدمات:</p>
 
-    <div class="sidebar" id="sidebar">
-        <a href="index.html">Home</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="about.html">About</a>
+        <p><strong>تمام ڈیزل جنریٹرز کے لیے مکمل انجن اوورہال:</strong></p>
+        <p>ہمارے ہاں، ڈیزل جنریٹرز کے لیے مکمل انجن اوورہال کی خصوصی خدمات فراہم کی جاتی ہیں۔ ہمارا مقصد ہے کہ آپ کا جنریٹر نئی زندگی پائے اور پہلے سے زیادہ موثر انداز میں کام کرے۔ ہم ہر ایک تفصیل کا خیال رکھتے ہیں، اعلیٰ معیار کے پرزے استعمال کرتے ہیں اور جدید تکنیکس کے ساتھ انجن کی مرمت کرتے ہیں تاکہ اس کی کارکردگی کو بحال کیا جا سکے۔ ہمارا ماہر عملہ آپ کے جنریٹر کی مکمل جانچ کرتا ہے اور اسے بہترین ورکنگ کنڈیشن میں لاتا ہے، جو آپ کے کاروبار کی روانی کو برقرار رکھتا ہے۔</p>
+
+        <p><strong>ڈیزل پمپ سروسز (ٹويوٹا 2D، شہزور اور دیگر):</strong></p>
+        <p>ہمارے ڈیزل پمپ سروسز آپ کے ڈیزل انجنز کی کارکردگی کو بہتر بنانے کے لیے ڈیزائن کیے گئے ہیں۔ چاہے آپ کا انجن ٹویوٹا 2D ہو، شہزور یا کوئی اور، ہم آپ کو معیاری ڈیزل پمپ سروس فراہم کرتے ہیں جس سے آپ کا انجن زیادہ دیر تک روانی سے چلتا ہے۔ ہم پمپ کی باریکی سے جانچ کرتے ہیں اور اس کے ہر جزو کو درست طریقے سے ترتیب دیتے ہیں تاکہ ایندھن کی بچت اور انجن کی کارکردگی کو بہتر بنایا جا سکے۔ ہمارا مقصد ہے کہ آپ کا انجن بہترین حالت میں ہو اور بغیر کسی پریشانی کے کام کرے۔</p>
+
+        <p><strong>تمام اقسام کے ڈیزل پیٹر انجنز کی مکمل سروس:</strong></p>
+        <p>ڈیزل پیٹر انجنز کو صحیح طریقے سے چلانے کے لیے باقاعدہ دیکھ بھال کی ضرورت ہوتی ہے۔ ہمارے ماہرین ہر قسم کے ڈیزل پیٹر انجنز کی مکمل سروس فراہم کرتے ہیں، چاہے وہ معمول کی دیکھ بھال ہو یا پیچیدہ مرمت۔ ہم ہر پرزے کی باریکی سے جانچ کرتے ہیں اور انجن کی مکمل مرمت کرتے ہیں تاکہ آپ کے انجن کی کارکردگی ہمیشہ اعلیٰ معیار کی ہو۔ ہماری سروس آپ کے انجن کو نہ صرف درست رکھتی ہے بلکہ اس کی عمر کو بھی طول دیتی ہے۔</p>
+
+        <p class="contact">📞 ابھی رابطہ کریں: واٹس ایپ لنک</p>
     </div>
-
-    <div class="main-content" id="home">
-        Login to HM Skills
-    </div>
-
-    <div class="login-form">
-        <input type="email" id="email" placeholder="Enter your Email">
-        <input type="password" id="password" placeholder="Enter your Password">
-        <input type="text" id="key" placeholder="Enter the Key" class="key-input">
-        <button onclick="validateKey()">Login</button>
-        <div class="error-message" id="error-message">Login Failed! Retry with the correct Key to access the Courses Portal.</div>
-    </div>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            if (sidebar.style.display === "block") {
-                sidebar.style.display = "none";
-            } else {
-                sidebar.style.display = "block";
-            }
-        }
-
-        function validateKey() {
-            const key = document.getElementById("key").value;
-            const errorMessage = document.getElementById("error-message");
-            if (key === "HMSkills*12") {
-                alert("Congrats! You got access to the Courses Portal. Best of luck!");
-                document.body.innerHTML = "<h1 style='text-align:center;'>Welcome student</h1>";
-            } else {
-                errorMessage.style.display = "block";
-                alert("Dear Student! You have entered a wrong key. You can't get access to the Courses Portal. Ask admin to confirm your verification before proceeding and give you the Pass Key. Otherwise, You'll not be able to Login!");
-            }
-        }
-    </script>
-
 </body>
 </html>
+
